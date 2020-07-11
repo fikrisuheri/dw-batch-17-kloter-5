@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomer 1</title>
+</head>
+
+<body>
+
+    <span id="app">Lihat hasil di console log</span>
+
+    <script>
+        function sortHuruf(data) {
+            var hasil = []
+            for (var i = 0; i < data.length; i++) {
+                hasil.push(data[i].sort())
+            }
+
+            console.log(hasil)
+
+        }
+        var data = [
+            ['a', 'c', 'b', 'e', 'd'],
+            ['g', 'e', 'f']
+        ]
+
+        sortHuruf(data)
+
+
+    </script>
+</body>
+
+</html>
