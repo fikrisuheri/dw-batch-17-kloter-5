@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nomor 3</title>
+</head>
+<style>
+
+    #gambar{
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+
+</style>
+<body>
+    <h1>Cetak Gambar</h1>
+    <span id="gambar"></span>
+
+    <script>
+        const cetak_gambar = (jumlah) => {
+            var baris, kolom;
+            var hasil = '';
+            var gambar = document.getElementById('gambar')
+
+            if (jumlah % 2 == 0) {
+                for (baris = 0; baris < jumlah; baris++) {
+                    for (kolom = 0; kolom < jumlah; kolom++) {
+                        if (baris === 0 || baris + 1 === jumlah) {
+                            hasil += ' * '
+                        } else {
+                            var cekKolom = kolom + 1;
+                            if (cekKolom % 3 === 0) {
+                                hasil += ' * '
+                            } else {
+                                hasil += ' = '
+                            }
+                        }
+                    }
+                    hasil += '<br />'
+                }
+            } else {
+                hasil = 'Parameter Angka Harus Genap';
+            }
+
+            gambar.innerHTML = hasil;
+
+        }
+
+        cetak_gambar(8)
+    </script>
+</body>
+
+</html>
